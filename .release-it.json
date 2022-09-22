@@ -10,7 +10,6 @@
     },
     "plugins": {
         "@release-it/bumper": {
-            "in": "version.yml",
             "out": "version.yml"
         },
         "@release-it/conventional-changelog": {

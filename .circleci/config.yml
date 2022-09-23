@@ -2,6 +2,7 @@ version: 2.1
 
 orbs:
   node: circleci/node@5.0.2
+  heroku: circleci/heroku@1.2.6
 
 workflows:
   build:
@@ -20,6 +21,16 @@ workflows:
 
       - node/run:
           npm-run: build
+          filters:
+            branches:
+              only:
+                - circleci
+
+      - heroku/deploy-via-git:
+          app-name: joke-api-iw2
+          requires:
+            - "node/test"
+            - "node/run"
           filters:
             branches:
               only:

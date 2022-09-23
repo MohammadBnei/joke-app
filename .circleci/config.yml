@@ -10,9 +10,9 @@ workflows:
           matrix:
             parameters:
               version:
-                - '12'
-                - '14'
-                - '16'
+                - "16.15"
+                - "14.19"
+                - "12.13"
           filters:
             branches:
               only:
@@ -24,4 +24,3 @@ workflows:
             branches:
               only:
                 - circleci
-

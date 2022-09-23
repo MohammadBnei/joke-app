@@ -12,7 +12,7 @@ jobs:
       - run: npm test
 
 workflows:
-  node-test:
+  build:
     jobs:
       - build-test:
           filters:

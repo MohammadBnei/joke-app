@@ -10,9 +10,9 @@ workflows:
           matrix:
             parameters:
               version:
-                - 12
-                - 14
-                - 16
+                - '12'
+                - '14'
+                - '16'
           filters:
             branches:
               only:
